@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ÇALIŞKAN MOTOR</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="nav-center">
+                <h1 class="logo">ÇALIŞKAN MOTOR</h1>
+            </div>
+            <button class="hamburger" id="hamburgerBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div class="side-nav" id="sideNav">
+        <div class="side-nav-content">
+            <button class="close-btn" id="closeBtn">
+                <i class="fas fa-times"></i>
+            </button>
+            <h2>ÇEŞME ILICA MERKEZLİ <br> İZMİR VE TÜM TÜRKİYE <hr></h2>
+            <p>Çalışkan Motor olarak 10 yıldan fazla deneyimimizle CF MOTO ve POLARIS markalarında motosiklet, ATV ve UTV satış ve servis hizmeti sunuyoruz.</p>
+            <div class="contact-info">
+                <p><strong>TELEFON</strong> - 0232 723 37 47</p>
+                <p><strong>WHATSAPP</strong> - 0507 277 94 84</p>
+            </div>
+            <div class="nav-categories">
+                <div class="nav-item">ATV & UTV</div>
+                <div class="nav-item">YETKİLİ SERVİS</div>
+                <div class="nav-item">MOTORSİKLET</div>
+                <div class="nav-item">AKSESUARLAR</div>
+                <div class="nav-item">POLARIS</div>
+                <div class="nav-item">CFMOTO</div>
+            </div>
+            <div class="social-icons-nav">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="slider-wrapper">
+        <div class="slider-container">
+            <div class="slide" id="slide1">
+                <div class="slide-bg"></div>
+                <div class="slide-content">
+                    <h2 class="slide-title">YETKİLİ SERVİS</h2>
+                    <a href=""> <p class="slide-subtitle">Servis Randevusu</p> </a>
+                </div>
+            </div>
+            <div class="slide" id="slide2">
+                <div class="slide-bg"></div>
+                <div class="slide-content">
+                    <h2 class="slide-title">POLARIS UTV</h2>
+                    <a href=""> <p class="slide-subtitle">Detaylı Bilgi & Sipariş</p> </a>
+                </div>
+            </div>
+            <div class="slide" id="slide3">
+                <div class="slide-bg"></div>
+                <div class="slide-content">
+                    <h2 class="slide-title">POLARIS ATV</h2>
+                    <a href=""><p class="slide-subtitle">Detaylı Bilgi & Sipariş</p> </a>
+                </div>
+            </div>
+            <div class="slide" id="slide4">
+                <div class="slide-bg"></div>
+                <div class="slide-content">
+                    <h2 class="slide-title">CFMOTO UTV</h2>
+                    <a href=""><p class="slide-subtitle">Detaylı Bilgi & Sipariş</p></a>
+                </div>
+            </div>
+            <div class="slide" id="slide5">
+                <div class="slide-bg"></div>
+                <div class="slide-content">
+                    <h2 class="slide-title">CFMOTO ATV</h2>
+                    <a href=""><p class="slide-subtitle">Detaylı Bilgi & Sipariş</p></a>
+                </div>
+            </div>
+            <div class="slide" id="slide6">
+                <div class="slide-bg"></div>
+                <div class="slide-content">
+                    <h2 class="slide-title">MOTORSİKLET ÇEŞİTLERİ</h2>
+                    <a href=""><p class="slide-subtitle">Detaylı Bilgi & Sipariş</p></a>
+                </div>
+            </div>
+            <div class="slide" id="slide7">
+                <div class="slide-bg"></div>
+                <div class="slide-content">
+                    <h2 class="slide-title">SCOOTER ÇEŞİTLERİ</h2>
+                    <a href=""><p class="slide-subtitle">Detaylı Bilgi & Sipariş</p></a>
+                </div>
+            </div>
+
+            <div class="nav-arrows">
+                <button class="nav-arrow prev" id="prevBtn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="nav-arrow next" id="nextBtn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <div class="slide-indicators">
+                <span class="indicator" data-slide="0"></span>
+                <span class="indicator" data-slide="1"></span>
+                <span class="indicator" data-slide="2"></span>
+                <span class="indicator" data-slide="3"></span>
+                <span class="indicator" data-slide="4"></span>
+                <span class="indicator" data-slide="5"></span>
+                <span class="indicator" data-slide="6"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
