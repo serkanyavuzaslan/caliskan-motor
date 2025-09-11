@@ -400,30 +400,74 @@ body {
     filter: brightness(1.1) saturate(1.2);
 }
 
-/* Loading ve Error stilleri */
-.loading, .error {
+/* Modern Loading Stili */
+.loading {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px 20px;
+    font-size: 1.3rem;
+    border-radius: 20px;
+    margin: 20px 0;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    color: #495057;
+    border: 2px solid #dee2e6;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Shimmer effect */
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255,255,255,0.4), 
+        transparent
+    );
+    animation: shimmer 2s infinite;
+}
+
+/* Spinner ikonu */
+.loading-spinner {
+    width: 24px;
+    height: 24px;
+    border: 3px solid #dee2e6;
+    border-top: 3px solid #dc3545;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    flex-shrink: 0;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* Error stilleri */
+.error {
     grid-column: 1 / -1;
     text-align: center;
     padding: 60px 20px;
     font-size: 1.5rem;
     border-radius: 12px;
     margin: 20px 0;
-}
-
-.loading {
-    background: linear-gradient(135deg, #ea2c2c, #ff0000);
-    color: rgb(255, 255, 255);
-    animation: pulse 2s infinite;
-}
-
-.error {
     background: linear-gradient(135deg, #dc3545, #c82333);
     color: white;
-}
-
-@keyframes pulse {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.8; transform: scale(1.02); }
 }
 
 /* Reload butonu */
@@ -535,5 +579,3 @@ body {
         font-size: 1rem;
     }
 }
-
-

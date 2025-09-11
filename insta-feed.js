@@ -4,9 +4,24 @@ const gallery = document.getElementById("insta-gallery");
 // Flask server adresi
 const API_URL = "http://127.0.0.1:5000/insta_feed?user=driven34&count=18"; // Daha fazla görsel iste
 
-// Loading göstergesi ekle
+// Modern Loading göstergesi ekle
 function showLoading() {
-    gallery.innerHTML = '<div class="loading">📷 Instagram görselleri yükleniyor...</div>';
+    gallery.innerHTML = `
+        <div class="loading">
+            <div class="loading-spinner"></div>
+            <span>Instagram görselleri yükleniyor...</span>
+        </div>
+    `;
+}
+
+// Görsel test loading
+function showImageTestLoading() {
+    gallery.innerHTML = `
+        <div class="loading">
+            <div class="loading-spinner"></div>
+            <span>Görseller test ediliyor...</span>
+        </div>
+    `;
 }
 
 // Hata mesajı göster
@@ -73,7 +88,7 @@ async function filterWorkingImages(imageUrls) {
 
 // Başarılı yükleme - sadece çalışan görselleri göster
 async function loadImages(data) {
-    gallery.innerHTML = '<div class="loading">🔍 Görseller test ediliyor...</div>';
+    showImageTestLoading(); // Yeni test loading fonksiyonunu kullan
     
     if (!data.images || data.images.length === 0) {
         showError('Görsel bulunamadı');
