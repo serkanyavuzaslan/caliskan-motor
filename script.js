@@ -252,3 +252,4 @@ document.addEventListener("DOMContentLoaded", () => {
     new AnimationManager();
     new PerformanceManager();
 });
+
